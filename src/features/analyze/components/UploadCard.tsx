@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Upload, FileText, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +11,7 @@ interface UploadCardProps {
 }
 
 export default function UploadCard({ resume, onUpload }: UploadCardProps) {
+  const t = useTranslations("analyze");
   const inputRef = useRef<HTMLInputElement>(null);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -69,8 +71,8 @@ export default function UploadCard({ resume, onUpload }: UploadCardProps) {
               {resume.name}
             </p>
             <p className="mt-0.5 text-xs text-muted-foreground">
-              {(resume.size / 1024).toFixed(0)} KB · PDF
-            </p>
+          {(resume.size / 1024).toFixed(0)} KB · {t("upload.format")}
+        </p>
           </div>
           <button
             type="button"
@@ -78,7 +80,7 @@ export default function UploadCard({ resume, onUpload }: UploadCardProps) {
             className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:border-destructive hover:text-destructive"
           >
             <X className="h-3 w-3" aria-hidden="true" />
-            Remove
+            {t("upload.remove")}
           </button>
         </div>
       ) : (
@@ -89,13 +91,13 @@ export default function UploadCard({ resume, onUpload }: UploadCardProps) {
           </div>
           <div>
             <p className="text-sm font-medium text-foreground">
-              Upload your resume
+              {t("upload.title")}
             </p>
             <p className="mt-1 text-xs text-muted-foreground">
-              Drag and drop or click to browse
+              {t("upload.subtitle")}
             </p>
             <p className="mt-0.5 text-xs text-muted-foreground">
-              PDF only
+              {t("upload.hint")}
             </p>
           </div>
         </div>

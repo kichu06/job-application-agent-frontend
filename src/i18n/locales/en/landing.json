@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Powered by LangGraph + Llama 3.1",
+    "headline": "Land your next job with",
+    "headlineHighlight": "AI-powered",
+    "headlineEnd": "analysis",
+    "subheadline": "Upload your resume, paste a job description, and get instant skill match analysis, a tailored cover letter, and interview prep.",
+    "ctaPrimary": "Analyze my resume",
+    "ctaSecondary": "See how it works",
+    "trust": {
+      "free": "Free to use",
+      "noSignup": "No signup required",
+      "fast": "Results in seconds"
+    }
+  },
+  "features": {
+    "label": "Features",
+    "title": "Everything you need to apply with confidence",
+    "subtitle": "Three AI-powered tools built into one seamless workflow.",
+    "matchScore": {
+      "title": "Match score",
+      "description": "See exactly how well your profile matches the job requirements with a percentage score and skill breakdown."
+    },
+    "coverLetter": {
+      "title": "Cover letter",
+      "description": "Get a tailored cover letter written using your actual experience and the job's specific requirements."
+    },
+    "interviewKit": {
+      "title": "Interview kit",
+      "description": "Prepare with likely interview questions and suggested answers based on your background and the role."
+    }
+  },
+  "howItWorks": {
+    "label": "How it works",
+    "title": "Three steps to a stronger application",
+    "subtitle": "From upload to interview-ready in under a minute.",
+    "step1": {
+      "title": "Upload your resume",
+      "description": "Drop in your PDF resume. The AI reads and parses your skills, experience, and projects automatically.",
+      "tag": "PDF supported"
+    },
+    "step2": {
+      "title": "Paste the job description",
+      "description": "Copy any job listing and paste it in. The AI extracts required skills, seniority level, and role details.",
+      "tag": "Any job, any industry"
+    },
+    "step3": {
+      "title": "Get your results",
+      "description": "Receive a match score, skill gap analysis, a tailored cover letter, and 5 interview questions with suggested answers.",
+      "tag": "Results in ~15 seconds"
+    }
+  },
+  "bottomCta": {
+    "label": "Get started free",
+    "title": "Ready to apply smarter?",
+    "subtitle": "No account needed. Just upload your resume and analyze.",
+    "cta": "Analyze my resume"
+  }
+}

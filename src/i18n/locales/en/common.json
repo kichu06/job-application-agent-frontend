@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Home",
+    "analyze": "Analyze",
+    "getStarted": "Get started"
+  },
+  "footer": {
+    "tagline": "AI-powered job application assistant. Upload your resume, paste a job description, and get instant analysis.",
+    "github": "View source on GitHub",
+    "navigation": "Navigation",
+    "builtWith": "Built with",
+    "rights": "All rights reserved.",
+    "madeFor": "Made for job seekers everywhere."
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Container from "@/components/layout/Container";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import ThemeToggle from "@/components/layout/ThemeToggle";
@@ -7,6 +8,8 @@ import Logo from "@/components/common/Logo";
 import { navigation } from "@/config/navigation";
 
 export default function Navbar() {
+  const t = useTranslations("nav");
+
   return (
     <header className="sticky top-0 z-50 h-16 border-b border-border bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
       <Container className="flex h-full items-center justify-between gap-4">
@@ -21,7 +24,7 @@ export default function Navbar() {
                   href={item.href}
                   className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
-                  {item.label}
+                  {t(item.key)}
                 </Link>
               </li>
             ))}
@@ -34,12 +37,11 @@ export default function Navbar() {
             <ThemeToggle />
           </div>
 
-          {/* Mobile CTA */}
           <Link
             href="/analyze"
             className="hidden sm:inline-flex items-center rounded-lg bg-foreground px-3.5 py-2 text-xs font-medium text-background transition-opacity hover:opacity-80"
           >
-            Get started
+            {t("getStarted")}
           </Link>
 
           <button

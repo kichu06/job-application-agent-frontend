@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 interface JobDescriptionFormProps {
@@ -13,6 +14,7 @@ export default function JobDescriptionForm({
   value,
   onChange,
 }: JobDescriptionFormProps) {
+  const t = useTranslations("analyze");
   const remaining = MAX_CHARS - value.length;
   const isNearLimit = remaining < 500;
   const isAtLimit = remaining <= 0;
@@ -23,7 +25,7 @@ export default function JobDescriptionForm({
       {/* Header */}
       <div className="flex items-center justify-between border-b border-border px-4 py-3">
         <p className="text-sm font-medium text-foreground">
-          Job description
+          {t("jobDescription.title")}
         </p>
         <span
           className={cn(
@@ -35,7 +37,7 @@ export default function JobDescriptionForm({
               : "text-muted-foreground"
           )}
         >
-          {remaining.toLocaleString()} remaining
+          {remaining.toLocaleString()} {t("jobDescription.remaining")}
         </span>
       </div>
 
@@ -43,8 +45,8 @@ export default function JobDescriptionForm({
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value.slice(0, MAX_CHARS))}
-        placeholder="Paste the full job description here..."
-        aria-label="Job description"
+        placeholder={t("jobDescription.placeholder")}
+        aria-label={t("jobDescription.title")}
         className="flex-1 resize-none bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none min-h-[152px]"
       />
     </div>

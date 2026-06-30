@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Check, Loader2 } from "lucide-react";
 import { AnalyzeStep } from "@/features/analyze/types";
 import { cn } from "@/lib/utils";
@@ -6,39 +7,10 @@ interface ProgressTrackerProps {
   step: AnalyzeStep;
 }
 
-const steps: { key: AnalyzeStep; label: string; description: string }[] = [
-  {
-    key: "uploading",
-    label: "Uploading resume",
-    description: "Reading your PDF file",
-  },
-  {
-    key: "parsing",
-    label: "Parsing resume",
-    description: "Extracting your skills and experience",
-  },
-  {
-    key: "analyzing",
-    label: "Analyzing job description",
-    description: "Identifying required skills and role details",
-  },
-  {
-    key: "cover_letter",
-    label: "Generating cover letter",
-    description: "Writing a tailored cover letter for you",
-  },
-  {
-    key: "interview",
-    label: "Preparing interview kit",
-    description: "Creating questions based on your profile",
-  },
-];
-
-const stepOrder = steps.map((s) => s.key);
-
 function getStepStatus(
   stepKey: AnalyzeStep,
-  currentStep: AnalyzeStep
+  currentStep: AnalyzeStep,
+  stepOrder: AnalyzeStep[]
 ): "done" | "active" | "pending" {
   const currentIndex = stepOrder.indexOf(currentStep);
   const stepIndex = stepOrder.indexOf(stepKey);
@@ -48,14 +20,45 @@ function getStepStatus(
 }
 
 export default function ProgressTracker({ step }: ProgressTrackerProps) {
+  const t = useTranslations("analyze");
+  const steps: { key: AnalyzeStep; label: string; description: string }[] = [
+    {
+      key: "uploading",
+      label: t("progress.uploading.label"),
+      description: t("progress.uploading.description"),
+    },
+    {
+      key: "parsing",
+      label: t("progress.parsing.label"),
+      description: t("progress.parsing.description"),
+    },
+    {
+      key: "analyzing",
+      label: t("progress.analyzing.label"),
+      description: t("progress.analyzing.description"),
+    },
+    {
+      key: "cover_letter",
+      label: t("progress.coverLetter.label"),
+      description: t("progress.coverLetter.description"),
+    },
+    {
+      key: "interview",
+      label: t("progress.interview.label"),
+      description: t("progress.interview.description"),
+    },
+  ];
+
+  const stepOrder = steps.map((s) => s.key);
+
   return (
     <div className="rounded-2xl border border-border bg-card p-6">
       <p className="mb-6 text-sm font-medium text-foreground text-center">
-        Analyzing your application...
+        {t("progress.title")}
       </p>
       <div className="flex flex-col gap-4">
         {steps.map((s) => {
-          const status = getStepStatus(s.key, step);
+          const status = getStepStatus(s.key, step, stepOrder);
           return (
             <div key={s.key} className="flex items-start gap-3">
               {/* Icon */}

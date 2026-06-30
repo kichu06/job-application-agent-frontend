@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "analyze": "Analysieren",
+    "getStarted": "Loslegen"
+  },
+  "footer": {
+    "tagline": "KI-gestützter Assistent für Bewerbungen. Lebenslauf hochladen, Stellenbeschreibung einfügen und sofort eine Analyse erhalten.",
+    "github": "Quellcode auf GitHub ansehen",
+    "navigation": "Navigation",
+    "builtWith": "Erstellt mit",
+    "rights": "Alle Rechte vorbehalten.",
+    "madeFor": "Gemacht für Jobsuchende überall."
+  },
+  "theme": {
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  }
+}

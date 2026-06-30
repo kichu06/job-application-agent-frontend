@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { ChevronDown } from "lucide-react";
 import { InterviewQuestion } from "@/features/analyze/types";
 import { cn } from "@/lib/utils";
@@ -10,6 +11,7 @@ interface InterviewKitProps {
 }
 
 export default function InterviewKit({ questions }: InterviewKitProps) {
+  const t = useTranslations("analyze");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -48,7 +50,7 @@ export default function InterviewKit({ questions }: InterviewKitProps) {
           {openIndex === index && (
             <div className="border-t border-border px-6 py-4">
               <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-2">
-                Suggested answer
+                {t("results.interview.suggestedAnswer")}
               </p>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {q.suggested_answer}

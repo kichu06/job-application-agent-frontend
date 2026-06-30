@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Unterstützt von LangGraph + Llama 3.1",
+    "headline": "Sichern Sie sich Ihren nächsten Job mit",
+    "headlineHighlight": "KI-gestützter",
+    "headlineEnd": "Analyse",
+    "subheadline": "Laden Sie Ihren Lebenslauf hoch, fügen Sie eine Stellenbeschreibung ein und erhalten Sie sofort eine Übereinstimmungsanalyse, ein passendes Anschreiben und Interviewvorbereitung.",
+    "ctaPrimary": "Lebenslauf analysieren",
+    "ctaSecondary": "So funktioniert's",
+    "trust": {
+      "free": "Kostenlos nutzbar",
+      "noSignup": "Keine Anmeldung erforderlich",
+      "fast": "Ergebnisse in Sekunden"
+    }
+  },
+  "features": {
+    "label": "Funktionen",
+    "title": "Alles, was Sie für eine überzeugende Bewerbung brauchen",
+    "subtitle": "Drei KI-gestützte Tools in einem nahtlosen Workflow.",
+    "matchScore": {
+      "title": "Übereinstimmungswert",
+      "description": "Sehen Sie genau, wie gut Ihr Profil zu den Stellenanforderungen passt, mit Prozentwert und Skill-Übersicht."
+    },
+    "coverLetter": {
+      "title": "Anschreiben",
+      "description": "Erhalten Sie ein maßgeschneidertes Anschreiben basierend auf Ihrer Erfahrung und den Anforderungen der Stelle."
+    },
+    "interviewKit": {
+      "title": "Interview-Kit",
+      "description": "Bereiten Sie sich mit wahrscheinlichen Interviewfragen und Antwortvorschlägen vor, basierend auf Ihrem Profil und der Rolle."
+    }
+  },
+  "howItWorks": {
+    "label": "So funktioniert's",
+    "title": "Drei Schritte zu einer stärkeren Bewerbung",
+    "subtitle": "Vom Hochladen bis zur Interviewvorbereitung in unter einer Minute.",
+    "step1": {
+      "title": "Lebenslauf hochladen",
+      "description": "Laden Sie Ihren Lebenslauf als PDF hoch. Die KI liest und analysiert automatisch Ihre Fähigkeiten, Erfahrungen und Projekte.",
+      "tag": "PDF unterstützt"
+    },
+    "step2": {
+      "title": "Stellenbeschreibung einfügen",
+      "description": "Kopieren Sie eine beliebige Stellenanzeige und fügen Sie sie ein. Die KI extrahiert erforderliche Fähigkeiten, Erfahrungslevel und Rollendetails.",
+      "tag": "Jede Branche, jede Stelle"
+    },
+    "step3": {
+      "title": "Ergebnisse erhalten",
+      "description": "Erhalten Sie einen Übereinstimmungswert, eine Skill-Gap-Analyse, ein maßgeschneidertes Anschreiben und 5 Interviewfragen mit Antwortvorschlägen.",
+      "tag": "Ergebnisse in ~15 Sekunden"
+    }
+  },
+  "bottomCta": {
+    "label": "Kostenlos starten",
+    "title": "Bereit, sich smarter zu bewerben?",
+    "subtitle": "Kein Konto erforderlich. Einfach Lebenslauf hochladen und analysieren.",
+    "cta": "Lebenslauf analysieren"
+  }
+}

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -7,6 +8,8 @@ interface AnalyzeButtonProps {
 }
 
 export default function AnalyzeButton({ onClick, disabled }: AnalyzeButtonProps) {
+  const t = useTranslations("analyze");
+
   return (
     <button
       type="button"
@@ -20,7 +23,7 @@ export default function AnalyzeButton({ onClick, disabled }: AnalyzeButtonProps)
       )}
     >
       <Sparkles className="h-4 w-4" aria-hidden="true" />
-      Analyze my application
+      {t("analyzeButton")}
     </button>
   );
 }

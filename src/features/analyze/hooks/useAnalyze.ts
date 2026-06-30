@@ -9,7 +9,7 @@ export function useAnalyze() {
   const [result, setResult] = useState<AnalyzeResult | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  async function analyze(resume: File, jdText: string) {
+  async function analyze(resume: File, jdText: string, language: string) {
     try {
       setError(null);
       setResult(null);
@@ -28,7 +28,7 @@ export function useAnalyze() {
 
       setStep("interview");
 
-      const data = await analyzeApplication(resume, jdText);
+      const data = await analyzeApplication(resume, jdText, language);
 
       setStep("done");
       setResult(data);

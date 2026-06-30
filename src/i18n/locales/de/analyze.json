@@ -1,0 +1,80 @@
+{
+  "header": {
+    "title": "Bewerbung analysieren",
+    "subtitle": "Laden Sie Ihren Lebenslauf hoch und fügen Sie eine Stellenbeschreibung ein, um zu beginnen."
+  },
+  "upload": {
+    "title": "Lebenslauf hochladen",
+    "subtitle": "Per Drag & Drop oder Klicken zum Durchsuchen",
+    "hint": "Nur PDF",
+    "format": "PDF",
+    "remove": "Entfernen"
+  },
+  "jobDescription": {
+    "title": "Stellenbeschreibung",
+    "placeholder": "Fügen Sie hier die vollständige Stellenbeschreibung ein...",
+    "remaining": "verbleibend"
+  },
+  "analyzeButton": "Bewerbung analysieren",
+  "progress": {
+    "title": "Ihre Bewerbung wird analysiert...",
+    "uploading": {
+      "label": "Lebenslauf wird hochgeladen",
+      "description": "PDF-Datei wird gelesen"
+    },
+    "parsing": {
+      "label": "Lebenslauf wird analysiert",
+      "description": "Fähigkeiten und Erfahrung werden extrahiert"
+    },
+    "analyzing": {
+      "label": "Stellenbeschreibung wird analysiert",
+      "description": "Erforderliche Fähigkeiten und Rollendetails werden identifiziert"
+    },
+    "coverLetter": {
+      "label": "Anschreiben wird erstellt",
+      "description": "Ein maßgeschneidertes Anschreiben wird verfasst"
+    },
+    "interview": {
+      "label": "Interview-Kit wird vorbereitet",
+      "description": "Fragen basierend auf Ihrem Profil werden erstellt"
+    }
+  },
+  "error": {
+    "tryAgain": "Erneut versuchen"
+  },
+  "results": {
+    "jobAt": "bei",
+    "title": "Ihre Ergebnisse",
+    "startOver": "Neu starten",
+    "tabs": {
+      "overview": "Übersicht",
+      "skills": "Skill-Analyse",
+      "coverLetter": "Anschreiben",
+      "interview": "Interview-Kit"
+    },
+    "overview": {
+      "matchScore": "Übereinstimmungswert",
+      "strongMatch": "Starke Übereinstimmung",
+      "moderateMatch": "Mittlere Übereinstimmung",
+      "weakMatch": "Schwache Übereinstimmung",
+      "candidate": "Kandidat",
+      "role": "Rolle",
+      "yearsExperience": "Jahre Erfahrung"
+    },
+    "skills": {
+      "matched": "Übereinstimmende Fähigkeiten",
+      "notMentioned": "Nicht im Lebenslauf erwähnt",
+      "noMissing": "Keine fehlenden Fähigkeiten — großartige Übereinstimmung!",
+      "hint": "Diese Fähigkeiten erscheinen in der Stellenbeschreibung, sind aber nicht explizit in Ihrem Lebenslauf aufgeführt. Auch wenn Sie diese besitzen, kann die exakte Formulierung helfen, ATS-Keyword-Filter zu bestehen."
+    },
+    "coverLetter": {
+      "title": "Anschreiben",
+      "download": "PDF herunterladen",
+      "copy": "Kopieren",
+      "copied": "Kopiert"
+    },
+    "interview": {
+      "suggestedAnswer": "Antwortvorschlag"
+    }
+  }
+}

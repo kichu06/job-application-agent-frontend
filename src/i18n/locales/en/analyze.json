@@ -1,0 +1,80 @@
+{
+  "header": {
+    "title": "Analyze your application",
+    "subtitle": "Upload your resume and paste a job description to get started."
+  },
+  "upload": {
+    "title": "Upload your resume",
+    "subtitle": "Drag and drop or click to browse",
+    "hint": "PDF only",
+    "format": "PDF",
+    "remove": "Remove"
+  },
+  "jobDescription": {
+    "title": "Job description",
+    "placeholder": "Paste the full job description here...",
+    "remaining": "remaining"
+  },
+  "analyzeButton": "Analyze my application",
+  "progress": {
+    "title": "Analyzing your application...",
+    "uploading": {
+      "label": "Uploading resume",
+      "description": "Reading your PDF file"
+    },
+    "parsing": {
+      "label": "Parsing resume",
+      "description": "Extracting your skills and experience"
+    },
+    "analyzing": {
+      "label": "Analyzing job description",
+      "description": "Identifying required skills and role details"
+    },
+    "coverLetter": {
+      "label": "Generating cover letter",
+      "description": "Writing a tailored cover letter for you"
+    },
+    "interview": {
+      "label": "Preparing interview kit",
+      "description": "Creating questions based on your profile"
+    }
+  },
+  "error": {
+    "tryAgain": "Try again"
+  },
+  "results": {
+    "jobAt": "bei",
+    "title": "Your results",
+    "startOver": "Start over",
+    "tabs": {
+      "overview": "Overview",
+      "skills": "Skill analysis",
+      "coverLetter": "Cover letter",
+      "interview": "Interview kit"
+    },
+    "overview": {
+      "matchScore": "Match score",
+      "strongMatch": "Strong match",
+      "moderateMatch": "Moderate match",
+      "weakMatch": "Weak match",
+      "candidate": "Candidate",
+      "role": "Role",
+      "yearsExperience": "years experience"
+    },
+    "skills": {
+      "matched": "Matched skills",
+      "notMentioned": "Not mentioned in resume",
+      "noMissing": "No missing skills — great match!",
+      "hint": "These skills appear in the job description but aren't explicitly written in your resume. Even if you have them, adding the exact wording can help you pass ATS keyword filters."
+    },
+    "coverLetter": {
+      "title": "Cover letter",
+      "download": "Download PDF",
+      "copy": "Copy",
+      "copied": "Copied"
+    },
+    "interview": {
+      "suggestedAnswer": "Suggested answer"
+    }
+  }
+}
