@@ -24,3 +24,35 @@ export async function analyzeApplication(
 
   return response.json();
 }
+export interface RefineCoverLetterResponse {
+  cover_letter: string;
+}
+
+export async function refineCoverLetter(
+  coverLetter: string,
+  instruction: string,
+  context: {
+    candidate_name: string;
+    job_title: string;
+    company_name: string;
+  }
+): Promise<RefineCoverLetterResponse> {
+  const response = await fetch(`${API_URL}/refine-cover-letter`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      cover_letter: coverLetter,
+      instruction,
+      context,
+    }),
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.detail || "Refinement failed");
+  }
+
+  return response.json();
+}

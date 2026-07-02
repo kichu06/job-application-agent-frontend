@@ -25,6 +25,15 @@ export interface SkillGaps {
   match_score: string;
 }
 
+export interface AtsScore {
+  score?: number | string;
+  match_percentage?: number | string;
+  matched_required_count?: number;
+  required_count?: number;
+  optional_matches?: string[];
+  missing_skills?: string[];
+}
+
 export interface InterviewQuestion {
   question: string;
   suggested_answer: string;
@@ -34,6 +43,7 @@ export interface AnalyzeResult {
   extracted_skills: ExtractedSkills;
   parsed_resume: ParsedResume;
   skill_gaps: SkillGaps;
+  ats_score?: AtsScore;
   cover_letter: string;
   interview_questions: InterviewQuestion[];
 }

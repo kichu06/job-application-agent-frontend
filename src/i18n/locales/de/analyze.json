@@ -8,6 +8,9 @@
     "subtitle": "Per Drag & Drop oder Klicken zum Durchsuchen",
     "hint": "Nur PDF",
     "format": "PDF",
+    "preview": "PDF Vorschau",
+    "previewTitle": "Lebenslaufvorschau",
+    "close": "Schließen",
     "remove": "Entfernen"
   },
   "jobDescription": {
@@ -54,6 +57,8 @@
     },
     "overview": {
       "matchScore": "Übereinstimmungswert",
+      "atsScore": "ATS-Wert",
+      "requiredSkillsMatched": "{matched}/{required} Pflichtfähigkeiten passend",
       "strongMatch": "Starke Übereinstimmung",
       "moderateMatch": "Mittlere Übereinstimmung",
       "weakMatch": "Schwache Übereinstimmung",

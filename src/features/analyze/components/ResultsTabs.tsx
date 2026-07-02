@@ -58,7 +58,14 @@ export default function ResultsTabs({ result, onReset }: ResultsTabsProps) {
         </TabsContent>
 
         <TabsContent value="cover-letter">
-          <CoverLetter coverLetter={result.cover_letter} />
+          <CoverLetter
+            coverLetter={result.cover_letter}
+            context={{
+              candidate_name: result.parsed_resume.candidate_name,
+              job_title: result.extracted_skills.job_title,
+              company_name: result.extracted_skills.company_name,
+            }}
+          />
         </TabsContent>
 
         <TabsContent value="interview">

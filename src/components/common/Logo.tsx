@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { BriefcaseBusiness } from "lucide-react";
 import { appName } from "@/config/app";
 import { cn } from "@/lib/utils";
 
@@ -11,10 +11,25 @@ interface LogoProps {
 export default function Logo({ href = "/", className }: LogoProps) {
   const content = (
     <>
-      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm ring-1 ring-border/40">
-        <BriefcaseBusiness className="h-5 w-5" aria-hidden="true" />
-      </div>
-      <span className="text-lg font-semibold tracking-tight text-foreground">{appName}</span>
+      <Image
+        src="/logo-light.png"
+        alt={`${appName} logo`}
+        width={70}
+        height={70}
+        className=" dark:hidden"
+        priority
+      />
+      <Image
+        src="/logo-dark.png"
+        alt={`${appName} logo`}
+        width={70}
+        height={70}
+        className="hidden  dark:block"
+        priority
+      />
+      <span className="ml-2 text-lg font-semibold tracking-tight text-foreground">
+        {appName}
+      </span>
     </>
   );
 
@@ -22,7 +37,7 @@ export default function Logo({ href = "/", className }: LogoProps) {
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        "inline-flex items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         className,
       )}
     >

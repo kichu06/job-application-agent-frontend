@@ -8,6 +8,9 @@
     "subtitle": "Drag and drop or click to browse",
     "hint": "PDF only",
     "format": "PDF",
+    "preview": "Preview PDF",
+    "previewTitle": "Resume preview",
+    "close": "Close",
     "remove": "Remove"
   },
   "jobDescription": {
@@ -54,6 +57,8 @@
     },
     "overview": {
       "matchScore": "Match score",
+      "atsScore": "ATS score",
+      "requiredSkillsMatched": "{matched}/{required} required skills matched",
       "strongMatch": "Strong match",
       "moderateMatch": "Moderate match",
       "weakMatch": "Weak match",
