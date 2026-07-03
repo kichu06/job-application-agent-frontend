@@ -26,9 +26,9 @@ export default function ResultsTabs({ result, onReset }: ResultsTabsProps) {
             {t("results.title")}
           </h2>
           <p className="text-sm text-muted-foreground">
-          {result.extracted_skills.job_title} {t("results.jobAt")}{" "}
-          {result.extracted_skills.company_name}
-        </p>
+            {result.extracted_skills.job_title} {t("results.jobAt")}{" "}
+            {result.extracted_skills.company_name}
+          </p>
         </div>
         <button
           type="button"
@@ -43,10 +43,18 @@ export default function ResultsTabs({ result, onReset }: ResultsTabsProps) {
       {/* Tabs */}
       <Tabs defaultValue="overview">
         <TabsList className="mb-6 w-full grid grid-cols-4">
-          <TabsTrigger value="overview">{t("results.tabs.overview")}</TabsTrigger>
-          <TabsTrigger value="skills">{t("results.tabs.skills")}</TabsTrigger>
-          <TabsTrigger value="cover-letter">{t("results.tabs.coverLetter")}</TabsTrigger>
-          <TabsTrigger value="interview">{t("results.tabs.interview")}</TabsTrigger>
+          <TabsTrigger value="overview" className="text-xs">
+            {t("results.tabs.overview")}
+          </TabsTrigger>
+          <TabsTrigger value="skills" className="text-xs">
+            {t("results.tabs.skills")}
+          </TabsTrigger>
+          <TabsTrigger value="cover-letter" className="text-xs">
+            {t("results.tabs.coverLetter")}
+          </TabsTrigger>
+          <TabsTrigger value="interview" className="text-xs">
+            {t("results.tabs.interview")}
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="overview">

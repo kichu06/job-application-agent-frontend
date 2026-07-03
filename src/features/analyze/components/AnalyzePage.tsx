@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useAnalyze } from "@/features/analyze/hooks/useAnalyze";
 import UploadCard from "@/features/analyze/components/UploadCard";
@@ -16,9 +16,20 @@ export default function AnalyzePage() {
   const { step, result, error, analyze, reset } = useAnalyze();
   const [resume, setResume] = useState<File | null>(null);
   const [jdText, setJdText] = useState("");
+  const resultsRef = useRef<HTMLDivElement>(null);
 
   const isRunning = step !== "idle" && step !== "done" && step !== "error";
   const isDone = step === "done";
+
+  // Auto scroll when results appear
+  useEffect(() => {
+    if (isDone && resultsRef.current) {
+      resultsRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  }, [isDone]);
 
   async function handleAnalyze() {
     if (!resume || !jdText.trim()) return;
@@ -70,7 +81,7 @@ export default function AnalyzePage() {
         )}
 
         {isDone && result && (
-          <div className="mx-auto max-w-4xl">
+          <div ref={resultsRef} className="mx-auto max-w-4xl scroll-mt-20">
             <ResultsTabs result={result} onReset={reset} />
           </div>
         )}
