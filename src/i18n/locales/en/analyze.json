@@ -76,10 +76,18 @@
       "title": "Cover letter",
       "download": "Download PDF",
       "copy": "Copy",
-      "copied": "Copied"
+      "copied": "Copied",
+      "refineTitle": "Refine with AI",
+      "refinePlaceholder": "Type an instruction, e.g. Make it more concise...",
+      "refineButton": "Refine",
+      "refinementFailed": "Refinement failed",
+      "undo": "Undo"
     },
     "interview": {
-      "suggestedAnswer": "Suggested answer"
+      "suggestedAnswer": "Suggested answer",
+      "generateMore": "Generate more questions",
+      "typeInstruction": "Type instruction...",
+      "undoLastChange": "Undo last change"
     }
   }
 }

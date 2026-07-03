@@ -76,10 +76,18 @@
       "title": "Anschreiben",
       "download": "PDF herunterladen",
       "copy": "Kopieren",
-      "copied": "Kopiert"
+      "copied": "Kopiert",
+      "refineTitle": "Mit KI optimieren",
+      "refinePlaceholder": "Geben Sie eine Anweisung ein, z. B. Kürzer formulieren...",
+      "refineButton": "Optimieren",
+      "refinementFailed": "Optimierung fehlgeschlagen",
+      "undo": "Rückgängig"
     },
     "interview": {
-      "suggestedAnswer": "Antwortvorschlag"
+      "suggestedAnswer": "Antwortvorschlag",
+      "generateMore": "Weitere Fragen erstellen",
+      "typeInstruction": "Anweisung eingeben...",
+      "undoLastChange": "Letzte Änderung rückgängig machen"
     }
   }
 }

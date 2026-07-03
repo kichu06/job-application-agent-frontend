@@ -85,7 +85,7 @@ export default function CoverLetter({ coverLetter, context }: CoverLetterProps) 
       setCurrentLetter(result.cover_letter);
       setInstruction("");
     } catch (err) {
-      setRefineError(err instanceof Error ? err.message : "Refinement failed");
+      setRefineError(err instanceof Error ? err.message : t("results.coverLetter.refinementFailed"));
     } finally {
       setIsRefining(false);
     }
@@ -126,7 +126,7 @@ export default function CoverLetter({ coverLetter, context }: CoverLetterProps) 
               className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               <Undo2 className="h-3 w-3" aria-hidden="true" />
-              Undo
+              {t("results.coverLetter.undo")}
             </button>
           )}
         </div>
@@ -180,7 +180,7 @@ export default function CoverLetter({ coverLetter, context }: CoverLetterProps) 
 
         {/* Section label */}
         <p className="text-xs font-medium text-muted-foreground mb-3">
-          Refine with AI
+          {t("results.coverLetter.refineTitle")}
         </p>
 
         {/* Quick suggestions */}
@@ -206,7 +206,7 @@ export default function CoverLetter({ coverLetter, context }: CoverLetterProps) 
             onChange={(e) => setInstruction(e.target.value)}
             onKeyDown={handleKeyDown}
             disabled={isRefining}
-            placeholder="Type an instruction, e.g. Make it more concise..."
+            placeholder={t("results.coverLetter.refinePlaceholder")}
             rows={2}
             className="flex-1 resize-none rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/40 disabled:opacity-50 transition-colors"
           />
@@ -232,7 +232,7 @@ export default function CoverLetter({ coverLetter, context }: CoverLetterProps) 
         {/* Enter hint */}
         {!isRefining && instruction.trim() && (
           <p className="mt-1.5 text-xs text-muted-foreground">
-            Press Enter to send
+            {t("results.coverLetter.refineHint")}
           </p>
         )}
 

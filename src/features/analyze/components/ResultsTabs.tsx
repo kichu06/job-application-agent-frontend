@@ -69,7 +69,13 @@ export default function ResultsTabs({ result, onReset }: ResultsTabsProps) {
         </TabsContent>
 
         <TabsContent value="interview">
-          <InterviewKit questions={result.interview_questions} />
+          <InterviewKit
+            questions={result.interview_questions}
+            jobTitle={result.extracted_skills.job_title}
+            companyName={result.extracted_skills.company_name}
+            candidateSkills={result.parsed_resume.your_skills}
+            missingSkills={result.skill_gaps.missing_skills}
+          />
         </TabsContent>
       </Tabs>
     </div>

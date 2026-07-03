@@ -56,3 +56,40 @@ export async function refineCoverLetter(
 
   return response.json();
 }
+
+export interface RefineInterviewQuestionsResponse {
+  interview_questions: Array<{
+    question: string;
+    suggested_answer: string;
+  }>;
+}
+
+export async function refineInterviewQuestions(
+  questions: Array<{ question: string; suggested_answer: string }>,
+  instruction: string,
+  context: {
+    job_title: string;
+    company_name: string;
+    candidate_skills?: string[];
+    missing_skills?: string[];
+  }
+): Promise<RefineInterviewQuestionsResponse> {
+  const response = await fetch(`${API_URL}/refine-interview-questions`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      questions,
+      instruction,
+      context,
+    }),
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.detail || "Refinement failed");
+  }
+
+  return response.json();
+}
